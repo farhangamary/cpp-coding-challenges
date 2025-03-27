@@ -13,9 +13,10 @@ Each challenge is located in its respective category. Each category contains the
 ## Requirements
 
 - CMake 3.8 or higher
+- gcc/g++ for linux
+- msvc(cl.exe) - the compiler for windows os.
+- vcpkg - for package management - for windows os.
 - googletest
-- Visual Studio (for Windows)
-- vcpkg (for package management - for windows)
 
 ## Setup
 
@@ -27,7 +28,7 @@ Each challenge is located in its respective category. Each category contains the
     ```bash
     vcpkg install gtest
     ```
-4. Open the project in Visual Studio.
+4. Open the project in MS Visual Studio.
 5. Build the project and start tests.
 
 ### Linux Setup
@@ -36,21 +37,23 @@ Each challenge is located in its respective category. Each category contains the
     ```bash
     sudo apt-get install cmake g++ libgtest-dev
     ```
-3. Run CMake:
+3. Run CMake: create a build directory and run::
     ```bash
-    cmake .
+    cmake -B build/ -S .
     ```
-4. Build the project:
+4. Build the project: go to the build directory and run:
     ```bash
-    make
+    make --build build/
     ```
 
 ## Running Tests
 You can run the tests using CTest or directly from Visual Studio.
-- To run tests from the terminal:
+- To run tests from the terminal, go into the build directory and run:
     ```bash
     ctest --output-on-failure
     ```
 - Or use the Visual Studio test runner.
+- You can also run the generated executable binaries of the tests.
+
 ## License
 This project is licensed under the MIT License.

@@ -1,11 +1,10 @@
-# GoogleTest Setup
 enable_testing()
-# Adjust this to point where the google test is installed - if you are on windows.
-set(GTest_DIR "D:/sources/dev/vcpkg/installed/x64-windows/share/gtest")
-# Find GoogleTest
+if(WIN32)
+    set(GTest_DIR "D:/sources/dev/vcpkg/installed/x64-windows/share/gtest")
+endif()
+
 find_package(GTest CONFIG REQUIRED)
 
-# Add tests for each challenge
 add_executable(test_count_unreachable_pairs graph/test_count_unreachable_pairs.cpp)
 add_executable(test_containers stl/test_containers.cpp)
 

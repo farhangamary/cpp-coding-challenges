@@ -1,4 +1,4 @@
-﻿# add directories of challenges
+﻿# add directories of challenges - categories
 add_subdirectory("algebra")
 add_subdirectory("graph/count_unreachable_pairs")
 add_subdirectory("language")
