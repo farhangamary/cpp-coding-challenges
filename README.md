@@ -2,8 +2,16 @@
 
 This is a collection of C++ coding challenges, and it will be expanded over time. Currently, it includes one completed challenge, with more challenges to be added in the future.
 
-**Feel free to add your challenge - every contribution is highly welcomed!**
+## Contributing Challenges
+If you have a C++ coding challenge you'd like to contribute, please create a new issue in this repository! The process is simple:
+Open a new issue and describe the challenge in detail, including:
+ - A clear problem statement
+ - Input/output specifications
+ - Example test cases
 
+Once the issue is created, we'll work together to implement solutions and add tests to ensure correctness.
+
+Thank you for contributing!
 
 ## Project Structure
 
