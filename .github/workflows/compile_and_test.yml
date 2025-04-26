@@ -18,10 +18,13 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install Dependencies
-      run: sudo apt update && sudo apt install -y libgtest-dev clang ninja-build
+      run: |
+        sudo apt update
+        sudo apt install -y libgtest-dev clang ninja-build
+        ninja --version
 
     - name: Configure with CMake Preset
-      run: cmake --preset default-configure
+      run: cmake --preset default-configure -G Ninja
 
     - name: Build with CMake Preset
       run: cmake --build --preset default-build
