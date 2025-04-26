@@ -11,7 +11,7 @@ Open a new issue and describe the challenge in detail, including:
 
 Once the issue is created, we'll work together to implement solutions and add tests to ensure correctness.
 
-Thank you for contributing!
+Thank you for contributing! - Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 ## Project Structure
 
@@ -20,48 +20,27 @@ Each challenge is located in its respective category. Each category contains the
 
 ## Requirements
 
-- CMake 3.8 or higher
-- gcc/g++ for linux
-- msvc(cl.exe) - the compiler for windows os.
-- vcpkg - for package management - for windows os.
+- CMake 3.18 or higher
+- LLVM CLang[++]
+- ninja
+- vcpkg(https://github.com/microsoft/vcpkg.) - for package management - for windows os.
 - googletest
 
-## Setup
+## Build and Test
 
-### Windows Setup (MSVC)
+### Windows
+ ```bash
+cmake --preset default-configure-windows --fresh -S . -B build
+cmake --build --preset default-build
+ctest --preset default-testing
+```
 
-1. Clone the repository
-2. Install `vcpkg` and integrate it with Visual Studio (see [vcpkg setup](https://github.com/microsoft/vcpkg/blob/master/docs/users/integration.md)).
-3. Install dependencies (GoogleTest):
-    ```bash
-    vcpkg install gtest
-    ```
-4. Open the project in MS Visual Studio.
-5. Build the project and start tests.
-
-### Linux Setup
-1. Clone the repository
-2. Install dependencies:
-    ```bash
-    sudo apt-get install cmake g++ libgtest-dev
-    ```
-3. Run CMake: create a build directory and run::
-    ```bash
-    cmake -B build/ -S .
-    ```
-4. Build the project: go to the build directory and run:
-    ```bash
-    make --build build/
-    ```
-
-## Running Tests
-You can run the tests using CTest or directly from Visual Studio.
-- To run tests from the terminal, go into the build directory and run:
-    ```bash
-    ctest --output-on-failure
-    ```
-- Or use the Visual Studio test runner.
-- You can also run the generated executable binaries of the tests.
-
-## License
-This project is licensed under the MIT License.
+### Linux
+```bash
+cmake --preset default-configure
+cmake --build --preset default-build
+ctest --preset default-testing
+ ```
+### License
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, distribute, and share this software for any purpose, including commercial use.
