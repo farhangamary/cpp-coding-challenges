@@ -1,7 +1,4 @@
 enable_testing()
-if(WIN32)
-    set(GTest_DIR "D:/sources/dev/vcpkg/installed/x64-windows/share/gtest")
-endif()
 
 find_package(GTest CONFIG REQUIRED)
 

@@ -1,13 +1,10 @@
-﻿cmake_minimum_required(VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.18)
+project(CppChallenges VERSION 0.1.0 LANGUAGES CXX)
 
-project(CppChallenges)
+set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-if(WIN32 AND NOT DEFINED CMAKE_TOOLCHAIN_FILE)
-  set(CMAKE_TOOLCHAIN_FILE "D:/sources/dev/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "")
-endif()
-if(UNIX)
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++17 -Wall -Wextra -Wpedantic")
-endif()
+find_package(GTest REQUIRED)
 
 enable_testing()
 
