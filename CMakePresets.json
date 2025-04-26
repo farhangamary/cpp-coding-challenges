@@ -1,32 +1,51 @@
 ﻿{
-    "version": 3,
+    "version": 4,
     "cmakeMinimumRequired": {
       "major": 3,
-      "minor": 18
+      "minor": 23
     },
+  
     "configurePresets": [
       {
-        "name": "default-configure",
-        "displayName": "Default Clang + Vcpkg (Ninja)",
+        "name": "base",
+        "hidden": true,
         "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "cacheVariables": {
           "CMAKE_C_COMPILER": "clang",
-          "CMAKE_CXX_COMPILER": "clang++",
-          "CMAKE_TOOLCHAIN_FILE": "Path_to vcpkg.cmake"
+          "CMAKE_CXX_COMPILER": "clang++"
+        }
+      },
+      {
+        "name": "default-configure",
+        "inherits": "base"
+      },
+      {
+        "name": "default-configure-windows",
+        "inherits": "base",
+        "condition": {
+          "type": "equals",
+          "lhs": "${hostSystemName}",
+          "rhs": "Windows"
+        },
+        "cacheVariables": {
+          "CMAKE_TOOLCHAIN_FILE": "Path to vcpkg.cmake"
         }
       }
     ],
+  
     "buildPresets": [
       {
         "name": "default-build",
         "configurePreset": "default-configure"
       }
     ],
+  
     "testPresets": [
       {
         "name": "default-testing",
         "configurePreset": "default-configure"
       }
     ]
-  }  
+  }
+  

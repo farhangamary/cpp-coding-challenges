@@ -24,7 +24,7 @@ jobs:
         ninja --version
 
     - name: Configure with CMake Preset
-      run: cmake --preset default-configure -G Ninja
+      run: cmake --preset default-configure
 
     - name: Build with CMake Preset
       run: cmake --build --preset default-build
