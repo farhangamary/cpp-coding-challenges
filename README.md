@@ -11,7 +11,7 @@ Open a new issue and describe the challenge in detail, including:
 
 Once the issue is created, we'll work together to implement solutions and add tests to ensure correctness.
 
-Thank you for contributing! - Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Thank you for contributing! - Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Project Structure
 

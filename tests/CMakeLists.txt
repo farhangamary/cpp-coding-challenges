@@ -1,6 +1,6 @@
 enable_testing()
 
-find_package(GTest CONFIG REQUIRED)
+find_package(GTest REQUIRED)
 
 add_executable(test_count_unreachable_pairs graph/test_count_unreachable_pairs.cpp)
 add_executable(test_containers stl/test_containers.cpp)
