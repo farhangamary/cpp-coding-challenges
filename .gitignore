@@ -1,6 +1,7 @@
 # Ignore the build output directories
 /out/
 /build/
+/Testing/
 /CMakeFiles/
 /CMakeCache.txt
 /cmake_install.cmake

@@ -38,7 +38,7 @@ ctest --preset default-testing
 ### Linux
 ```bash
 cmake --preset default-configure
-cmake --build --preset default-build
+cmake --build build --target all
 ctest --preset default-testing
  ```
 ### License
