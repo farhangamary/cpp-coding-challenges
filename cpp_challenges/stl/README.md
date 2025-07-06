@@ -1,8 +1,8 @@
 # C++ stl related challenges
 
 ## Containers
-### Merge k Sorted Lists
-#### Challenage
+### 🕹️ Merge k Sorted Lists
+####  📜 Challenge
 You are given an array of `k` linked-lists `lists`, each linked-list is sorted in ascending order.
 
 _Merge all the linked-lists into one sorted linked-list and return it._
@@ -34,3 +34,61 @@ This method ensures an efficient and elegant merge of `k` sorted lists!
 - Total Operations: `O(N log k)`, where `N` is the total number of nodes across all `k` lists.
 
 ___
+___
+
+### 🕹️ Game of Life
+
+**Difficulty:** Medium  
+**Taken from:** [Game of Life on LeetCode](https://leetcode.com/problems/game-of-life/description/)
+
+---
+
+#### 📜 Challenge
+
+Implement the **Game of Life**, a cellular automaton devised by mathematician John Conway.  
+You are given a `m x n` board of cells, where:  
+
+- `1` = live cell  
+- `0` = dead cell  
+
+Each cell's state in the **next generation** is determined by these rules (based on its 8 neighbors):
+
+1. **Underpopulation**: Any live cell with fewer than 2 live neighbors dies.  
+2. **Survival**: Any live cell with 2 or 3 live neighbors lives on.  
+3. **Overpopulation**: Any live cell with more than 3 live neighbors dies.  
+4. **Reproduction**: Any dead cell with exactly 3 live neighbors becomes a live cell.  
+
+You must compute the next state of the board **in place** (without using extra space).
+
+---
+
+##### 🖋️ Example
+
+##### Input
+```text
+board = [
+  [0,1,0],
+  [0,0,1],
+  [1,1,1],
+  [0,0,0]
+]
+```
+
+##### Output
+```text
+[
+  [0,0,0],
+  [1,0,1],
+  [0,1,1],
+  [0,1,0]
+]
+```
+
+---
+
+##### ⚡ Constraints
+
+- `m == board.length`
+- `n == board[i].length`
+- `1 <= m, n <= 25`
+- `board[i][j]` is `0` or `1`.
