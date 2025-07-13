@@ -3,14 +3,17 @@
 #include <queue>
 #include <vector>
 
-struct ListNode {
+struct ListNode
+{
 	int val;
-	ListNode* next;
+	ListNode *next;
 	ListNode(int x);
-	ListNode(int x, ListNode* next);
+	ListNode(int x, ListNode *next);
 };
 
-class Solution {
+class Solution
+{
 public:
-	ListNode* mergeKLists(std::vector<ListNode*>& lists);
+	ListNode *mergeKLists(std::vector<ListNode *> &lists);
+	void gameOfLife(std::vector<std::vector<int>> &board);
 };
