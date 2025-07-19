@@ -36,7 +36,7 @@ TEST(GameOfLifeTest, BasicTest)
 			{0, 1, 1},
 			{0, 1, 0}};
 		sl.gameOfLife(board);
-		//EXPECT_EQ(board, expected);
+		EXPECT_EQ(board, expected);
 	}
 
 	{
@@ -47,7 +47,7 @@ TEST(GameOfLifeTest, BasicTest)
 			{1, 1},
 			{1, 1}};
 		sl.gameOfLife(board);
-		//EXPECT_EQ(board, expected);
+		EXPECT_EQ(board, expected);
 	}
 
 	{
@@ -60,7 +60,7 @@ TEST(GameOfLifeTest, BasicTest)
 			{0, 0, 0},
 			{0, 0, 0}};
 		sl.gameOfLife(board);
-		//EXPECT_EQ(board, expected);
+		EXPECT_EQ(board, expected);
 	}
 
 	{
@@ -73,6 +73,6 @@ TEST(GameOfLifeTest, BasicTest)
 			{0, 0, 0},
 			{1, 0, 1}};
 		sl.gameOfLife(board);
-		//EXPECT_EQ(board, expected);
+		EXPECT_EQ(board, expected);
 	}
 }
