@@ -1,6 +1,8 @@
 # C++ stl related challenges
 
 ## Containers
+
+
 ### 🕹️ Merge k Sorted Lists
 ####  📜 Challenge
 You are given an array of `k` linked-lists `lists`, each linked-list is sorted in ascending order.
@@ -33,8 +35,7 @@ This method ensures an efficient and elegant merge of `k` sorted lists!
 - Heap Operations: `O(log k)` for insertion and removal.
 - Total Operations: `O(N log k)`, where `N` is the total number of nodes across all `k` lists.
 
-___
-___
+<hr style="height:3px; background-color:#AAA; border:none;">
 
 ### 🕹️ Game of Life
 
@@ -92,3 +93,49 @@ board = [
 - `n == board[i].length`
 - `1 <= m, n <= 25`
 - `board[i][j]` is `0` or `1`.
+
+----
+#### Solution
+
+##### 📝 Approach
+
+This solution simulates the Game of Life on a 2D grid by:  
+
+1. **Copying the original board**  
+   - We create a copy (`shallowBoard`) to avoid modifying cells while still needing their original state for neighbor checks.  
+
+2. **Iterating over each cell**  
+   - For each cell `(i, j)` in the grid, we count its 8 neighbors using a predefined direction vector.  
+
+3. **Applying the Game of Life rules**  
+   - **Underpopulation**: Live cell dies if neighbors < 2.  
+   - **Overpopulation**: Live cell dies if neighbors > 3.  
+   - **Survival**: Live cell stays alive with 2 or 3 neighbors.  
+   - **Reproduction**: Dead cell becomes alive with exactly 3 neighbors.  
+
+4. **Updating the board in place**  
+   - After applying rules to each cell, the original board is updated directly.
+
+---
+
+##### ⏱ Time and Space Complexity
+
+###### Time Complexity: **O(m × n)**  
+- Each cell is visited once.  
+- For each cell, counting neighbors takes constant time (8 directions).  
+
+###### Space Complexity: **O(m × n)**  
+- A copy of the grid (`shallowBoard`) is used for safe neighbor checks.
+
+Where `m` = number of rows, `n` = number of columns.
+
+---
+
+###### Summary
+
+This approach prioritizes **clarity and correctness** over in-place space optimization. It works efficiently for the constraints of the problem (small grids).
+
+<hr style="height:3px; background-color:#AAA; border:none;">
+
+
+
