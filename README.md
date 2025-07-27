@@ -1,6 +1,6 @@
 # cpp_challenges
 
-This is a collection of C++ coding challenges, and it will be expanded over time. Currently, it includes one completed challenge, with more challenges to be added in the future.
+This repository is a growing collection of C++ coding challenges. It currently includes multiple completed challenges, and more will be added over time as the collection continues to expand.
 
 ## Contributing Challenges
 If you have a C++ coding challenge you'd like to contribute, please create a new issue in this repository! The process is simple:
