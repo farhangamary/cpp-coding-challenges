@@ -137,5 +137,38 @@ This approach prioritizes **clarity and correctness** over in-place space optimi
 
 <hr style="height:3px; background-color:#AAA; border:none;">
 
+#### 📜 Challenge
+
+##### Continuous Subarrays
+
+**Difficulty**: Medium  
+**Link**: [Leetcode - Continuous Subarrays](https://leetcode.com/problems/continuous-subarrays)
+
+###### Problem Summary
+
+Given an integer array `nums`, you need to find the number of **contiguous subarrays** such that the absolute difference between any two elements is **at most 2**.
+
+- Return the **total number of such subarrays**.
+
+###### Constraints
+
+- `1 <= nums.length <= 10^5`
+- `-10^9 <= nums[i] <= 10^9`
+
+---
+
+###### Example Test Cases
+
+```cpp
+// Example 1
+Input: nums = {1, 2, 3}
+Output: 6
+// Explanation: All subarrays satisfy the condition.
+
+// Example 2
+Input: nums = {1, 3, 5}
+Output: 3
+// Explanation: Only single-element subarrays are valid.
+```
 
 

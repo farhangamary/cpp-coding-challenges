@@ -76,3 +76,36 @@ TEST(GameOfLifeTest, BasicTest)
 		EXPECT_EQ(board, expected);
 	}
 }
+
+TEST(ContinuousSubarraysTest, AllTests)
+{
+	// Example2
+	{
+		std::vector<int> nums = {1, 2, 3};
+		//EXPECT_EQ(sl.continuousSubarrays(nums), 6);
+	}
+
+	// Example2
+	{
+		std::vector<int> nums = {1, 3, 5};
+		//EXPECT_EQ(sl.continuousSubarrays(nums), 3);
+	}
+
+	// SingleElement
+	{
+		std::vector<int> nums = {42};
+		//EXPECT_EQ(sl.continuousSubarrays(nums), 1);
+	}
+
+	// AllSameElement
+	{
+		std::vector<int> nums = {5, 5, 5, 5};
+		//EXPECT_EQ(sl.continuousSubarrays(nums), 10); // n*(n+1)/2 for n=4
+	}
+
+	// IncreasingSequence
+	{
+		std::vector<int> nums = {1, 2, 3, 4, 5};
+		//EXPECT_EQ(sl.continuousSubarrays(nums), 9);
+	}
+}

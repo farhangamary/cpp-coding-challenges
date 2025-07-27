@@ -19,6 +19,7 @@ private:
 public:
 	ListNode *mergeKLists(std::vector<ListNode *> &lists);
 	void gameOfLife(std::vector<std::vector<int>> &board);
+	long long continuousSubarrays(std::vector<int>& nums);
 
 private:
 	const std::vector<std::pair<int, int>> cellNeighborsDir_8 = {

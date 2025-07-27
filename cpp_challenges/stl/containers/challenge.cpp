@@ -103,3 +103,9 @@ void Solution::gameOfLife(vector<vector<int>> &board)
 		}
 	}
 }
+
+long long Solution::continuousSubarrays(std::vector<int> &nums)
+{
+	//Solution here
+    return 0;
+}
